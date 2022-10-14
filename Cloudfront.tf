@@ -22,7 +22,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
   default_root_object = "index.html"
 
 
-  # aliases = ["powerhouse.com"]
+  # aliases = ["slpowerhouse.com"]
 
   default_cache_behavior {
     allowed_methods  = ["DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT"]
@@ -49,10 +49,6 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
     geo_restriction {
       restriction_type = "none"
     }
-  }
-
-  tags = {
-    Environment = "production"
   }
 
   viewer_certificate {
